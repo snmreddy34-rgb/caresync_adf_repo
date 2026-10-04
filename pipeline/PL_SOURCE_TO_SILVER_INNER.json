@@ -29,12 +29,34 @@
 						"type": "DatasetReference"
 					}
 				}
+			},
+			{
+				"name": "Set Start Time",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Start_time",
+					"value": {
+						"value": "@utcNow()",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
 			"table_id": {
 				"type": "int",
 				"defaultValue": 1
+			}
+		},
+		"variables": {
+			"Start_time": {
+				"type": "String"
 			}
 		},
 		"annotations": []
