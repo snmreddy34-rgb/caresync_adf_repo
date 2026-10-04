@@ -4,7 +4,7 @@
 		"activities": [
 			{
 				"name": "Read Source Tables List",
-				"description": "SELECT table_id FROM ctrl.table_config WHERE is_active=1 AND source_system='neon_postgres'",
+				"description": "",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -17,10 +17,6 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": {
-							"value": "SELECT table_id FROM ctrl.table_config WHERE is_active=1 AND source_system='@{pipeline().parameters.source_system}'",
-							"type": "Expression"
-						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
