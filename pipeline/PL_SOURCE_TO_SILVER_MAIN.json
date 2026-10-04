@@ -17,6 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT table_id FROM ctrl.table_config WHERE is_active=1 AND source_system='neon_postgres'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -28,12 +29,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"source_system": {
-				"type": "string",
-				"defaultValue": "neon_postgres"
-			}
-		},
 		"annotations": []
 	}
 }
